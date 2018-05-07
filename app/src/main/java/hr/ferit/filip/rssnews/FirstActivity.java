@@ -104,14 +104,7 @@ public class FirstActivity extends AppCompatActivity {
                 // We will get the XML from an input stream
                 xpp.setInput(getInputStream(url), "UTF_8");
 
-                /* We will parse the XML content looking for the "<title>" tag which appears inside the "<item>" tag.
-                 * We should take into consideration that the rss feed name is also enclosed in a "<title>" tag.
-                 * Every feed begins with these lines: "<channel><title>Feed_Name</title> etc."
-                 * We should skip the "<title>" tag which is a child of "<channel>" tag,
-                 * and take into consideration only the "<title>" tag which is a child of the "<item>" tag
-                 *
-                 * In order to achieve this, we will make use of a boolean variable called "insideItem".
-                 */
+             
                 boolean insideItem = false;
 
                 // Returns the type of current event: START_TAG, END_TAG, START_DOCUMENT, END_DOCUMENT etc..
